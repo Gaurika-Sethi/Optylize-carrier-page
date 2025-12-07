@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --- Sub-components ---
 
@@ -6,7 +7,7 @@ const Header = () => (
   <header className="flex justify-between items-center py-4 px-8 md:px-16 border-b border-gray-100 max-w-7xl mx-auto">
     {/* Left side: Logo and Nav */}
     <div className="flex items-center space-x-8">
-      <h1 className="text-2xl font-bold text-black cursor-pointer">Optylize</h1>
+      <Link to="/" className="text-2xl font-bold text-black cursor-pointer">Optylize</Link>
       <nav className="hidden lg:flex space-x-6 text-sm text-gray-700">
         <a href="#" className="hover:text-black">Personal</a>
         <a href="#" className="hover:text-black">Business</a>
