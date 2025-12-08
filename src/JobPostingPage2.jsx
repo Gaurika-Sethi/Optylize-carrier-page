@@ -8,12 +8,6 @@ const Header = () => (
     {/* Left side: Logo and Nav */}
     <div className="flex items-center space-x-8">
       <Link to="/" className="text-2xl font-bold text-black cursor-pointer">Optylize</Link>
-      <nav className="hidden lg:flex space-x-6 text-sm text-gray-700">
-        <a href="#" className="hover:text-black">Personal</a>
-        <a href="#" className="hover:text-black">Business</a>
-        <a href="#" className="hover:text-black">Kids & Teens</a>
-        <a href="#" className="hover:text-black">Company</a>
-      </nav>
     </div>
 
   </header>
