@@ -42,29 +42,11 @@ const AboutOptylize = () => (
     
     <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       Optylize combines strategic foresight and technology backbone to help businesses navigate change.
-    </p>
-    
-    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       Our 360° Value Approach is tailored to companies deriving ≥50% revenue from legacy business shifting them into agile, tech‑enabled growth paths.
-    </p>
-    
-    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       We deliver insights, implementation, and advisory in one integrated model.
-    </p>
-    
-    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       We help legacy-focused firms modernize while unlocking growth with precision and speed. We support industry transformation:"Shaping Value Experience".
-    </p>
-    
-    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       We listen closely, ask the right questions, and tailor every step to what truly matters for your business. From first insight to final delivery, we focus on what moves the needle — building strategies that are clear, practical, and built to last.
-    </p>
-    
-    <p className="text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       At Optylize, we combine cutting-edge technology, bold innovational thinking, and dynamic young energy to redefine strategic advisory.
-    </p>
-    
-    <p className="text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       Our approach is built to help businesses unlock growth, optimize investments, and stay ahead in rapidly evolving markets. Unlike traditional models, we blend data-driven insights with agile problem-solving & delivering strategies that are not just theoretical, but actionable and result oriented.
     </p>
   </section>
