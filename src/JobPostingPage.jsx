@@ -21,11 +21,11 @@ const Header = () => (
 
 const JobDetails = () => (
   <section className="text-center mt-12 px-4 max-w-4xl mx-auto">
-    <h2 className="text-5xl md:text-6xl font-normal text-gray-900 leading-tight">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight whitespace-nowrap">
       Sales Manager Intern (India Sales)
     </h2>
     
-    <p className="text-lg md:text-xl text-gray-700 mt-6">
+    <p className="text-base md:text-lg text-gray-700 mt-4 leading-6 md:leading-7">
       <span className="font-bold">Objective:</span> Dominate domestic consulting sales
     </p>
     
@@ -37,35 +37,35 @@ const JobDetails = () => (
 
 const AboutOptylize = () => (
   <section className="mt-8 px-8 py-6 bg-white max-w-4xl mx-auto">
-    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       About Optylize
     </h3>
     
-    <p className="text-gray-700 leading-relaxed mb-6">
+    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       Optylize combines strategic foresight and technology backbone to help businesses navigate change.
     </p>
     
-    <p className="text-gray-700 leading-relaxed mb-6">
+    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       Our 360° Value Approach is tailored to companies deriving ≥50% revenue from legacy business shifting them into agile, tech‑enabled growth paths.
     </p>
     
-    <p className="text-gray-700 leading-relaxed mb-6">
+    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       We deliver insights, implementation, and advisory in one integrated model.
     </p>
     
-    <p className="text-gray-700 leading-relaxed mb-6">
+    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       We help legacy-focused firms modernize while unlocking growth with precision and speed. We support industry transformation:"Shaping Value Experience".
     </p>
     
-    <p className="text-gray-700 leading-relaxed mb-6">
+    <p className="text-gray-700 leading-6 md:leading-7 mb-4 text-base md:text-lg">
       We listen closely, ask the right questions, and tailor every step to what truly matters for your business. From first insight to final delivery, we focus on what moves the needle — building strategies that are clear, practical, and built to last.
     </p>
     
-    <p className="text-gray-700 leading-relaxed">
+    <p className="text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       At Optylize, we combine cutting-edge technology, bold innovational thinking, and dynamic young energy to redefine strategic advisory.
     </p>
     
-    <p className="text-gray-700 leading-relaxed">
+    <p className="text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       Our approach is built to help businesses unlock growth, optimize investments, and stay ahead in rapidly evolving markets. Unlike traditional models, we blend data-driven insights with agile problem-solving & delivering strategies that are not just theoretical, but actionable and result oriented.
     </p>
   </section>
@@ -73,11 +73,11 @@ const AboutOptylize = () => (
 
 const ScopeOfTheWork = () => (
   <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
-    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Scope of the Work
     </h3>
     
-    <ul className="space-y-3 text-gray-700 leading-relaxed">
+    <ul className="space-y-2.5 text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       <li className="flex items-start">
         <span className="mr-3 text-gray-500">•</span>
         <span>Build & manage India outreach</span>
@@ -120,11 +120,11 @@ const ScopeOfTheWork = () => (
 
 const RequiredSkillProfile = () => (
   <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
-    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Required skill profile
     </h3>
     
-    <ul className="space-y-3 text-gray-700 leading-relaxed">
+    <ul className="space-y-2.5 text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       <li className="flex items-start">
         <span className="mr-3 text-gray-500">•</span>
         <span>Fluent Hindi + English</span>
@@ -151,11 +151,11 @@ const RequiredSkillProfile = () => (
 
 const CommissionRange = () => (
   <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
-    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Commission Range
     </h3>
     
-    <ul className="space-y-3 text-gray-700 leading-relaxed">
+    <ul className="space-y-2.5 text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       <li className="flex items-start">
         <span className="mr-3 text-gray-500">•</span>
         <span>7–10% on deals they close</span>
@@ -170,11 +170,11 @@ const CommissionRange = () => (
 
 const WorkingStyle = () => (
   <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
-    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Working Style
     </h3>
     
-    <p className="text-gray-700 leading-relaxed">
+    <p className="text-gray-700 leading-6 md:leading-7 text-base md:text-lg">
       Daily Commitment of 2-3 Hours
     </p>
   </section>

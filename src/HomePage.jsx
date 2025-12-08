@@ -88,7 +88,7 @@ const FeaturedRoles = () => {
           <h2 className="text-3xl font-bold text-gray-900">Featured roles</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {roles.map((role, idx) => (
             <Link key={idx} to={role.path} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer group block">
               <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{role.title}</h3>
