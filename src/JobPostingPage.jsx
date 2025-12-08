@@ -14,7 +14,7 @@ const Header = () => (
 );
 
 const JobDetails = () => (
-  <section className="text-center mt-12 px-4 max-w-4xl mx-auto">
+  <section className="text-center mt-12 px-4 max-w-5xl mx-auto">
     <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight whitespace-nowrap">
       Sales Manager Intern (India Sales)
     </h2>
@@ -30,7 +30,7 @@ const JobDetails = () => (
 );
 
 const AboutOptylize = () => (
-  <section className="mt-8 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-8 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       About Optylize
     </h3>
@@ -66,7 +66,7 @@ const AboutOptylize = () => (
 );
 
 const ScopeOfTheWork = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Scope of the Work
     </h3>
@@ -113,7 +113,7 @@ const ScopeOfTheWork = () => (
 );
 
 const RequiredSkillProfile = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Required skill profile
     </h3>
@@ -144,7 +144,7 @@ const RequiredSkillProfile = () => (
 );
 
 const CommissionRange = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Commission Range
     </h3>
@@ -163,7 +163,7 @@ const CommissionRange = () => (
 );
 
 const WorkingStyle = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 mb-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Working Style
     </h3>

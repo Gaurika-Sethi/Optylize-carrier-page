@@ -14,7 +14,7 @@ const Header = () => (
 );
 
 const JobDetails = () => (
-  <section className="text-center mt-12 px-4 max-w-4xl mx-auto">
+  <section className="text-center mt-12 max-w-5xl mx-auto">
     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
       Business Development Intern
     </h2>
@@ -35,7 +35,7 @@ const JobDetails = () => (
 );
 
 const AboutOptylize = () => (
-  <section className="mt-8 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-8 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       About Optylize
     </h3>
@@ -71,7 +71,7 @@ const AboutOptylize = () => (
 );
 
 const KeyResponsibilities = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Key Responsibilities
     </h3>
@@ -175,7 +175,7 @@ const KeyResponsibilities = () => (
 );
 
 const RequiredSkillsQualifications = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Required Skills & Qualifications
     </h3>
@@ -226,7 +226,7 @@ const RequiredSkillsQualifications = () => (
 );
 
 const CompensationIncentives = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Compensation & Incentives
     </h3>
@@ -253,7 +253,7 @@ const CompensationIncentives = () => (
 );
 
 const TimeCommitment = () => (
-  <section className="mt-6 px-8 py-6 bg-white max-w-4xl mx-auto">
+  <section className="mt-6 mb-6 bg-white max-w-5xl mx-auto">
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4">
       Time Commitment
     </h3>

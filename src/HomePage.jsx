@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { 
+  FiZap, 
+  FiHeart, 
+  FiUsers, 
+  FiAperture,
+  FiDollarSign,
+  FiMonitor,
+  FiGlobe,
+  FiCoffee,
+  FiBookOpen
+} from 'react-icons/fi';
 // --- Icons (SVG replacements for external libraries) ---
 
 const MapPinIcon = (props) => (
@@ -66,7 +77,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <div className="pt-32 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
         Delivering value through Data, Innovation & Strategy deriving best Strategy & AI Practices
       </h1>
@@ -82,7 +93,7 @@ const FeaturedRoles = () => {
   ];
 
   return (
-    <div className="py-16 bg-gray-50">
+    <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Featured roles</h2>
@@ -105,30 +116,134 @@ const FeaturedRoles = () => {
   );
 };
 
-const Values = () => {
+const OurValuesSection = () => {
   const values = [
-    { title: "Get It Done", desc: "Optylizers always push through! We care about results and believe that grit and determination can break through any wall." },
-    { title: "Deliver WOW", desc: "We love building great products and turning the complexity of a chaotic world into the simplicity of a beautiful solution." },
-    { title: "Dream Team", desc: "We select, coach, and retain the top talent only and give them all the support to achieve greatness." },
-    { title: "Never Settle", desc: "Optylize is for those who always strive for excellence, for those who want to become the best in the world at what they do." },
+    {
+      icon: <FiAperture className="w-6 h-6 text-gray-800" />,
+      title: 'Innovation First',
+      description: 'We push boundaries and challenge the status quo to create products that that matter.',
+    },
+    {
+      icon: <FiUsers className="w-6 h-6 text-gray-800" />,
+      title: 'Collaboration',
+      description: 'Great things are built together. We value diverse perspectives and open dialogue.',
+    },
+    {
+      icon: <FiZap className="w-6 h-6 text-gray-800" />,
+      title: 'Move Fast',
+      description: 'We ship quickly, learn from feedback, and iterate towards excellence.',
+    },
+    {
+      icon: <FiHeart className="w-6 h-6 text-gray-800" />,
+      title: 'Care Deeply',
+      description: 'We care about our craft, our users, and each other. Quality is non-negotiable.',
+    },
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Discover our values</h2>
-          <p className="text-lg text-gray-600 max-w-3xl">
-            We believe that any success comes from two things: our people and our culture. 
-            Our culture is our DNA, it defines who we are and how we operate.
+          <h2 className="text-3xl font-bold text-gray-900">Our Values</h2>
+          <p className="mt-2 text-xl text-gray-600">
+            The principles that guide how we work, build, and grow together.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((val, idx) => (
-            <div key={idx} className="bg-gray-50 p-6 rounded-2xl h-full">
-              <h3 className="text-xl font-bold mb-3">{val.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{val.desc}</p>
+        {/* Values Grid */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+          {values.map((value) => (
+            // Card Container
+            <div
+              key={value.title}
+              className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl"
+            >
+              {/* Icon Container (The small circle/square around the icon) */}
+              <div className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-lg mb-4">
+                {value.icon}
+              </div>
+              
+              {/* Content */}
+              <h3 className="text-xl font-semibold text-gray-900 mt-2">
+                {value.title}
+              </h3>
+              <p className="mt-2 text-base text-gray-600">
+                {value.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BenefitsAndPerksSection = () => {
+  const perks = [
+    {
+      icon: <FiDollarSign className="w-6 h-6 text-gray-800" />,
+      title: 'Competitive Salary',
+      description: 'Top of market compensation',
+    },
+    {
+      icon: <FiMonitor className="w-6 h-6 text-gray-800" />,
+      title: 'Remote First',
+      description: 'Work from anywhere',
+    },
+    {
+      icon: <FiGlobe className="w-6 h-6 text-gray-800" />,
+      title: 'Flexible Hours',
+      description: 'Balance work and life',
+    },
+    {
+      icon: <FiCoffee className="w-6 h-6 text-gray-800" />,
+      title: 'Unlimited PTO',
+      description: 'Rest when you need it',
+    },
+    {
+      icon: <FiHeart className="w-6 h-6 text-gray-800" />,
+      title: 'Health Coverage',
+      description: 'Full medical, dental, vision',
+    },
+    {
+      icon: <FiBookOpen className="w-6 h-6 text-gray-800" />,
+      title: 'Learning Budget',
+      description: '$2,000 annual stipend',
+    },
+  ];
+
+  return (
+    <div className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">Benefits & Perks</h2>
+          <p className="mt-2 text-xl text-gray-600">
+            We take care of our team so they can focus on doing their best work.
+          </p>
+        </div>
+
+        {/* Perks Grid */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {perks.map((perk) => (
+            // Card Container
+            <div
+              key={perk.title}
+              className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl"
+            >
+              {/* Icon Container (Light gray background for the icon) */}
+              <div className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-lg mb-4">
+                {perk.icon}
+              </div>
+              
+              {/* Content */}
+              <h3 className="text-xl font-semibold text-gray-900 mt-2">
+                {perk.title}
+              </h3>
+              <p className="mt-2 text-base text-gray-600">
+                {perk.description}
+              </p>
             </div>
           ))}
         </div>
@@ -184,7 +299,8 @@ const HomePage = () => {
       <main>
         <Hero />
         <FeaturedRoles />
-        <Values />
+        <OurValuesSection />
+        <BenefitsAndPerksSection />
       </main>
       <Footer />
     </div>
