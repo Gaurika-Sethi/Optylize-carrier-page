@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// --- Sub-components ---
+const handleApplyClick = () => {
+  window.location.href = 'https://forms.gle/mGxdMEpZZrpwQvMd8';
+};
 
 const Header = () => (
   <header className="flex justify-between items-center py-4 px-8 md:px-16 border-b border-gray-100 max-w-7xl mx-auto">
@@ -23,7 +25,9 @@ const JobDetails = () => (
       <span className="font-bold">Objective:</span> Dominate domestic consulting sales
     </p>
     
-    <button className="bg-black text-white font-medium px-8 py-3 rounded-lg mt-10 hover:bg-gray-800 transition duration-150 shadow-lg">
+    <button 
+    onClick={handleApplyClick}
+    className="bg-black text-white font-medium px-8 py-3 rounded-lg mt-10 hover:bg-gray-800 transition duration-150 shadow-lg">
       Apply for this role
     </button>
   </section>
