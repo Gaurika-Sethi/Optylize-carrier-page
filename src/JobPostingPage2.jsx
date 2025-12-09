@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const handleApplyClick = () => {
-  window.location.href = 'https://forms.gle/mGxdMEpZZrpwQvMd8';
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLScCHJh9EhMuhskSsZKTQ4YSF7IzvdAXvtyTJaJlHBSgX2rgrg/viewform",
+    "_blank"
+    );
 };
 
 const Header = () => (
