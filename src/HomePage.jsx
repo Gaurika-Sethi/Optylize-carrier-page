@@ -302,7 +302,6 @@ const HomePage = () => {
         <OurValuesSection />
         <BenefitsAndPerksSection />
       </main>
-      <Footer />
     </div>
   );
 };
