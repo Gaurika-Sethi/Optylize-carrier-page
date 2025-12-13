@@ -90,6 +90,13 @@ const FeaturedRoles = () => {
   const roles = [
     { title: 'Sales Manager Intern (India Sales)', loc: 'Remote', path: '/job/sales-manager-intern' },
     { title: 'Business Development Intern', loc: 'Remote', path: '/job/business-development-intern' },
+    { title: 'Agentic AI Research Intern', loc: 'Remote', path: '/job/agentic-ai-research-intern' },
+    { title: 'Product Engineering Intern', loc: 'Remote', path: '/job/product-engineering-intern' },
+    { title: 'UI/UX Designer Intern', loc: 'Remote', path: '/job/UI/UX-designer-intern' },
+    { title: 'GTM (Go-to-Market) Sales Intern', loc: 'Remote', path: '/job/GTM-sales-intern' },
+    { title: 'Product Marketing Intern', loc: 'Remote', path: '/job/product-marketing-intern' },
+    { title: 'Strategy Research Intern (AI/ML & DL Frontier)', loc: 'Remote', path: '/job/strategy-research-intern' },
+    { title: 'GTM Manager Intern', loc: 'Remote', path: '/job/GTM-manager-intern' },
   ];
 
   return (
@@ -251,46 +258,6 @@ const BenefitsAndPerksSection = () => {
     </div>
   );
 };
-
-const Footer = () => {
-  return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Plans</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              {['Standard', 'Plus', 'Premium', 'Metal', 'Ultra'].map(i => <li key={i}><a href="#" className="hover:text-black">{i}</a></li>)}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              {['About us', 'Careers', 'Sustainability', 'Code of Conduct'].map(i => <li key={i}><a href="#" className="hover:text-black">{i}</a></li>)}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Help</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              {['Contact us', 'Help Centre', 'System Status', 'API'].map(i => <li key={i}><a href="#" className="hover:text-black">{i}</a></li>)}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              {['Privacy', 'Terms', 'Complaints', 'Cookies'].map(i => <li key={i}><a href="#" className="hover:text-black">{i}</a></li>)}
-            </ul>
-          </div>
-        </div>
-        <div className="pt-8 border-t border-gray-200 text-center md:text-left">
-          <p className="text-xs text-gray-400">© Optylize 2025</p>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-// --- Main Component ---
 
 const HomePage = () => {
   return (
