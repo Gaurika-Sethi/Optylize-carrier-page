@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
+import ContactPage from './ContactPage';
 import JobPostingPage from './JobPostingPage';
 import JobPostingPage2 from './JobPostingPage2';
 import JobPostingPage3 from './JobPostingPage3';
@@ -16,6 +17,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/job/sales-manager-intern" element={<JobPostingPage />} />
         <Route path="/job/business-development-intern" element={<JobPostingPage2 />} />
         <Route path="/job/agentic-ai-research-intern" element={<JobPostingPage3 />} />

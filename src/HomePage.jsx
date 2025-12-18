@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   FiZap, 
   FiHeart, 
@@ -11,6 +11,7 @@ import {
   FiCoffee,
   FiBookOpen
 } from 'react-icons/fi';
+import TalkToUsButton from './TalkToUsButton';
 // --- Icons (SVG replacements for external libraries) ---
 
 const MapPinIcon = (props) => (
@@ -39,6 +40,7 @@ const XIcon = (props) => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="fixed w-full bg-white z-50 border-b border-gray-100">
@@ -49,13 +51,14 @@ const Navbar = () => {
             <Link to="/" className="text-2xl font-bold tracking-tighter">Optylize</Link>
           </div>
 
-          {/* Desktop Menu - Links and Auth Buttons REMOVED per request */}
+          {/* Desktop Menu - Talk to us button */}
           <div className="hidden md:flex space-x-8 items-center">
-            {/* Empty per user request */}
+            <TalkToUsButton onClick={() => navigate('/contact')} />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <TalkToUsButton onClick={() => navigate('/contact')} />
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-500">
               {isOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
