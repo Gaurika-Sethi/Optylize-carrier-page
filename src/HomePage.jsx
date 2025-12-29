@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   FiZap, 
@@ -38,17 +38,69 @@ const XIcon = (props) => (
 
 // --- Components ---
 
+const Popup = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Check if popup was already closed in this session
+    const popupClosed = sessionStorage.getItem('popupClosed');
+    if (popupClosed !== 'true') {
+      // Show popup after 3 seconds delay
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 3000);
+
+      // Cleanup timer on unmount
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    sessionStorage.setItem('popupClosed', 'true');
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div 
+      style={{
+        display: 'flex',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'rgba(0,0,0,0.5)',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 9999
+      }}
+    >
+      <div style={{
+        background: 'white',
+        padding: '20px',
+        borderRadius: '8px',
+        textAlign: 'center'
+      }}>
+        <h2>Hi!</h2>
+        <button id="closePopup" onClick={handleClose}>Close</button>
+      </div>
+    </div>
+  );
+};
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <nav className="fixed w-full bg-white z-50 border-b border-gray-100">
+    <nav className="fixed w-full bg-white z-50 border-b border-gray-100" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #f3f4f6' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Optylize */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-2xl font-bold tracking-tighter">Optylize</Link>
+            <Link to="/" className="text-2xl font-bold tracking-tighter" style={{ color: '#111827' }}>Optylize</Link>
           </div>
 
           {/* Desktop Menu - Talk to us button */}
@@ -79,11 +131,23 @@ const Navbar = () => {
 };
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="pt-32 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+      <h1 
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8"
+        style={{ color: '#111827' }}
+      >
         Delivering value through Data, Innovation & Strategy deriving best Strategy & AI Practices
       </h1>
+      <button
+        onClick={() => navigate('/about')}
+        className="mt-6 px-8 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-700 transition duration-200"
+        style={{ backgroundColor: '#111827', color: '#ffffff' }}
+      >
+        Learn More About Us
+      </button>
     </div>
   );
 };
@@ -264,9 +328,10 @@ const BenefitsAndPerksSection = () => {
 
 const HomePage = () => {
   return (
-    <div className="font-sans text-gray-900 bg-white">
+    <div className="font-sans text-gray-900 bg-white" style={{ minHeight: '100vh', width: '100%' }}>
+      <Popup />
       <Navbar />
-      <main>
+      <main style={{ width: '100%' }}>
         <Hero />
         <FeaturedRoles />
         <OurValuesSection />
