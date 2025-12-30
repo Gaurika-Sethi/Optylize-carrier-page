@@ -103,8 +103,14 @@ const Navbar = () => {
             <Link to="/" className="text-2xl font-bold tracking-tighter" style={{ color: '#111827' }}>Optylize</Link>
           </div>
 
-          {/* Desktop Menu - Talk to us button */}
+          {/* Desktop Menu - Navigation Links and Talk to us button */}
           <div className="hidden md:flex space-x-8 items-center">
+            <Link to="/insights" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+              Insights
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+              About
+            </Link>
             <TalkToUsButton onClick={() => navigate('/contact')} />
           </div>
 
@@ -122,7 +128,27 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 absolute w-full top-16 left-0">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <p className="text-gray-400 text-sm p-2">Navigation links removed.</p>
+            <Link 
+              to="/insights" 
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium"
+            >
+              Insights
+            </Link>
+            <Link 
+              to="/about" 
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium"
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       )}

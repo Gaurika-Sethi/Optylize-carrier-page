@@ -12,6 +12,7 @@ import JobPostingPage6 from './JobPostingPage6';
 import JobPostingPage7 from './JobPostingPage7';
 import JobPostingPage8 from './JobPostingPage8';
 import JobPostingPage9 from './JobPostingPage9';
+import InsightsPage from './InsightsPage';
 // import TestApp from './TestApp'; // Uncomment to test if React is rendering
 
 export default function App() {
@@ -32,7 +33,8 @@ export default function App() {
         <Route path="/job/GTM-sales-intern" element={<JobPostingPage6 />} />
         <Route path="/job/product-marketing-intern" element={<JobPostingPage7 />} />
         <Route path="/job/strategy-research-intern" element={<JobPostingPage8 />} />
-        <Route path="/job/GTM-manager-intern" element={<JobPostingPage9 />} />       
+        <Route path="/job/GTM-manager-intern" element={<JobPostingPage9 />} />
+        <Route path="/insights" element={<InsightsPage />} />       
       </Routes>
     </Router>
   );
