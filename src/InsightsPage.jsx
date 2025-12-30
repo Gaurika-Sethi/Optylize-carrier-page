@@ -46,89 +46,137 @@ const AheadOfChangeSection = () => {
 const contentCards = [
   {
     type: "RESEARCH REPORT",
-    title: "Sovereign AI: From managing risk to accelerating growth",
     textColor: "text-white",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Holiday shopping 2025: 'Tis the season for smarter spending and renewed confidence",
     textColor: "text-white",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Unlocking the Next Era of Sustainability Leadership",
     textColor: "text-white",
   },
   {
     type: "NEWS ARTICLE",
-    title: "Five traits of tech-driven CEOs",
     textColor: "text-black",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Sovereign AI: From managing risk to accelerating growth",
     textColor: "text-white",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Holiday shopping 2025: 'Tis the season for smarter spending and renewed confidence",
     textColor: "text-white",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Unlocking the Next Era of Sustainability Leadership",
     textColor: "text-white",
   },
   {
     type: "NEWS ARTICLE",
-    title: "Five traits of tech-driven CEOs",
     textColor: "text-black",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Sovereign AI: From managing risk to accelerating growth",
     textColor: "text-white",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Holiday shopping 2025: 'Tis the season for smarter spending and renewed confidence",
     textColor: "text-white",
   },
   {
     type: "RESEARCH REPORT",
-    title: "Unlocking the Next Era of Sustainability Leadership",
     textColor: "text-white",
   },
   {
     type: "NEWS ARTICLE",
-    title: "Five traits of tech-driven CEOs",
     textColor: "text-black",
   },
 ];
 
-const Card = ({ type, title, textColor }) => (
-  <div className="aspect-[2/3] w-full shadow-lg relative rounded-lg overflow-hidden bg-gray-200">
-    {/* Placeholder for image */}
-    <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
-      <span className="text-gray-500 font-medium">image</span>
-    </div>
-    
-    <div className={`p-6 md:p-8 flex flex-col justify-end h-full relative z-10`}>
-      {/* Card Type/Category */}
-      <span className={`uppercase text-xs font-semibold tracking-wider mb-2 opacity-70 ${textColor}`}>
-        {type}
-      </span>
+const Card = ({ type, textColor }) => {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const cardId = `card-${type}-${Math.random().toString(36).substr(2, 9)}`;
+
+  return (
+    <div 
+      className="aspect-[2/3] w-full relative shadow-lg rounded-lg overflow-hidden"
+      onMouseEnter={() => setIsExpanded(true)}
+      onMouseLeave={() => setIsExpanded(false)}
+    >
+      {/* Image Container - Blurs and fades as text comes in */}
+      <div 
+        className="absolute inset-0 w-full h-full rounded-lg overflow-hidden"
+        style={{
+          filter: isExpanded ? `blur(${8}px)` : 'blur(0px)',
+          opacity: isExpanded ? 0.3 : 1,
+          transition: 'filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      >
+        {/* Image */}
+        <img 
+          src="https://img.freepik.com/free-photo/businesspeople-having-good-time-meeting_1098-1786.jpg?semt=ais_hybrid&w=740&q=80"
+          alt={type}
+          className="w-full h-full object-cover"
+        />
+        
+        <div className={`absolute inset-0 p-6 md:p-8 flex flex-col justify-end h-full z-10`}>
+          {/* Card Type/Category */}
+          <span 
+            className={`uppercase text-xs font-semibold tracking-wider mb-2 ${textColor}`}
+            style={{
+              opacity: isExpanded ? 0.2 : 0.7,
+              transition: 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+            }}
+          >
+            {type}
+          </span>
+        </div>
+      </div>
+
+      {/* Text Content - Slides in from right */}
+      <div 
+        id={cardId}
+        className="absolute inset-0 w-full h-full bg-white rounded-lg p-6 md:p-8 flex flex-col"
+        style={{
+          transform: isExpanded ? 'translateX(0%)' : 'translateX(100%)',
+          opacity: isExpanded ? 1 : 0,
+          transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      >
+        <div className="flex-1 overflow-y-auto">
+          <span className="uppercase text-xs font-semibold tracking-wider mb-4 block text-gray-600">
+            {type}
+          </span>
+          <p className="text-gray-800 text-sm leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p className="text-gray-800 text-sm leading-relaxed mt-4">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+        </div>
+      </div>
+
+      {/* Toggle Button */}
+      <button
+        className="rad-content-grid-card__front-toggle absolute inset-0 z-20 w-full h-full opacity-0 cursor-pointer"
+        aria-expanded={isExpanded}
+        aria-controls={cardId}
+        aria-label={`${type}: Expand`}
+        onClick={() => setIsExpanded(!isExpanded)}
+      />
       
-      {/* Card Title */}
-      <h3 className={`text-xl font-bold leading-snug ${textColor}`}>
-        {title}
-      </h3>
-      
-      {/* Optional: Add an invisible link overlay for accessibility/clickability */}
-      <a href="#" className="absolute inset-0 z-10" aria-label={`Read ${title}`}></a>
+      {/* CTA Cover Link */}
+      <a 
+        href="#" 
+        className="rad-content-grid-card__cta-cover absolute inset-0 z-30"
+        aria-label={`${type}: Expand`}
+        title=""
+        tabIndex={-1}
+      />
     </div>
-  </div>
-);
+  );
+};
 
 const ContentCardSection = () => {
   return (
